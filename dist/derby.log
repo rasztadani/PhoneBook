@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sun Mar 24 10:39:35 CET 2019:
+ Derby The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579) változat betöltése: a816c00e-0169-af11-d465-000000bcf4f8 példány
+a(z) C:\Users\raszt\Documents\EclipseProjects\EclipseWorkspace\PhoneBook\dist\sampleDB adatbázis-könyvtáron: sun.misc.Launcher$AppClassLoader@1f96302 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_201-b09
+user.dir=c:\Users\raszt\Documents\EclipseProjects\EclipseWorkspace\PhoneBook\dist
+os.name=Windows 10
+os.arch=x86
+os.version=10.0
+derby.system.home=null
+Az adatbázis-osztálybetöltõ elindult - derby.database.classpath=''

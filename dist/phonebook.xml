@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project PhoneBook with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}/dist"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/phonebook.jar">
+            <manifest>
+                <attribute name="Main-Class" value="phonebook.PhoneBook"/>
+                <attribute name="Class-Path" value=". phonebook_lib/org.eclipse.fx.ide.css.jfx8_3.3.0.201809010700.jar phonebook_lib/itextpdf-5.5.5.jar phonebook_lib/derbyLocale_cs.jar phonebook_lib/derbyLocale_de_DE.jar phonebook_lib/derbyLocale_es.jar phonebook_lib/derbyLocale_fr.jar phonebook_lib/derbyLocale_hu.jar phonebook_lib/derbyLocale_it.jar phonebook_lib/derbyLocale_ja_JP.jar phonebook_lib/derbyLocale_ko_KR.jar phonebook_lib/derbyLocale_pl.jar phonebook_lib/derbyLocale_pt_BR.jar phonebook_lib/derbyLocale_ru.jar phonebook_lib/derbyLocale_zh_CN.jar phonebook_lib/derbyLocale_zh_TW.jar phonebook_lib/derby.jar"/>
+            </manifest>
+            <fileset dir="${dir.buildfile}/bin"/>
+        </jar>
+        <delete dir="${dir.jarfile}/phonebook_lib"/>
+        <mkdir dir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/.p2/pool/plugins/org.eclipse.fx.ide.css.jfx8_3.3.0.201809010700.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="${dir.buildfile}/itextpdf-5.5.5.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_cs.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_de_DE.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_es.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_fr.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_hu.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_it.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_ja_JP.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_ko_KR.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_pl.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_pt_BR.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_ru.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_zh_CN.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derbyLocale_zh_TW.jar" todir="${dir.jarfile}/phonebook_lib"/>
+        <copy file="C:/Users/raszt/Documents/JavaKurs/Apache Derby/db-derby-10.14.2.0-bin/lib/derby.jar" todir="${dir.jarfile}/phonebook_lib"/>
+    </target>
+</project>

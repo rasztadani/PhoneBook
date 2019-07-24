@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane id="anchor" fx:id="anchor" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phonebook.ViewController">
+   <children>
+      <Label layoutX="236.0" layoutY="14.0" text="Telefonkönyv">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <SplitPane id="mainSplit" fx:id="mainSplit" dividerPositions="0.2353923205342237" layoutY="45.0" prefHeight="606.0" prefWidth="791.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <StackPane id="menuPane" fx:id="menuPane" layoutX="-51.0" layoutY="75.0" prefHeight="604.0" prefWidth="138.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Pane id="exportPane" fx:id="exportPane" layoutX="63.0" layoutY="127.0" prefHeight="604.0" prefWidth="633.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-178.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button id="exportButton" fx:id="exportButton" layoutX="202.0" layoutY="277.0" mnemonicParsing="false" onAction="#exportList" text="Pdf mentése" />
+                        <TextField id="inputExportName" fx:id="inputExportName" layoutX="121.0" layoutY="217.0" prefHeight="25.0" prefWidth="243.0" />
+                        <Label layoutX="87.0" layoutY="38.0" text="Exportálás Pdf-be">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="202.0" layoutY="164.0" text="Fájl neve:">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                     </children></Pane>
+                  <Pane id="contactPane" fx:id="contactPane" layoutX="73.0" layoutY="137.0" prefHeight="604.0" prefWidth="633.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-178.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView id="table" fx:id="table" editable="true" layoutY="7.0" prefHeight="448.0" prefWidth="590.0">
+                          <placeholder>
+                          	<Label text="Nincs adat." />
+                          </placeholder>
+                          <columns>
+                          </columns>
+                        </TableView>
+                        <TextField id="inputLastName" fx:id="inputLastName" layoutX="96.0" layoutY="470.0" prefHeight="25.0" prefWidth="198.0" promptText="Teszt" />
+                        <TextField id="inputFirstName" fx:id="inputFirstName" layoutX="96.0" layoutY="506.0" prefHeight="25.0" prefWidth="198.0" promptText="Elek" />
+                        <TextField id="inputEmail" fx:id="inputEmail" layoutX="96.0" layoutY="542.0" prefHeight="25.0" prefWidth="198.0" promptText="elek.teszt@teszt.com" />
+                        <Label alignment="CENTER_RIGHT" layoutX="21.0" layoutY="474.0" prefWidth="70.0" text="Vezetéknév :" />
+                        <Label alignment="CENTER_RIGHT" layoutX="21.0" layoutY="510.0" prefWidth="70.0" text="Keresztnév :" />
+                        <Label alignment="CENTER_RIGHT" layoutX="21.0" layoutY="546.0" prefHeight="17.0" prefWidth="70.0" text="E-mail :" />
+                        <Button id="addNewContactButton" fx:id="addNewContactButton" layoutX="311.0" layoutY="506.0" mnemonicParsing="false" onAction="#addContact" prefHeight="25.0" prefWidth="138.0" text="Új kontakt hozzáadása" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
